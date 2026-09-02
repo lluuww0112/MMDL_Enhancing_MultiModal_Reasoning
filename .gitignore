@@ -1,0 +1,9 @@
+.vscode/
+.venv/
+__pycache__/
+*.pyc
+
+.env
+./weights
+/lmms-eval
+*.json

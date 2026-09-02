@@ -1,0 +1,54 @@
+# Core runtime for the LLaVA / DDPS demo scripts in utils/run.
+# Match the Colab T2V/MMBench CUDA 12.8 inference stack.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+torchaudio==2.11.0+cu128
+transformers==5.3.0
+accelerate==1.13.0
+tokenizers==0.22.2
+safetensors>=0.4.3
+huggingface-hub==1.6.0
+sentencepiece>=0.1.99
+protobuf>=4.25.0
+
+# Data, image, and config utilities.
+Pillow>=10.0.0
+numpy>=1.26.0
+omegaconf>=2.3.0
+requests>=2.31.0
+tqdm>=4.66.0
+packaging>=23.0
+PyYAML>=6.0.1
+pandas>=2.2.0
+openpyxl>=3.1.0
+matplotlib>=3.8.0
+
+# Model adapters / quantization.
+peft>=0.10.0
+bitsandbytes>=0.43.0
+
+# Evaluation and helper scripts.
+fire>=0.6.0
+editdistance>=0.6.2
+pycocoevalcap>=1.2
+# lmms-eval requires the OpenAI 1.x client API.
+openai>=1.0.0,<2.0.0
+ray>=2.9.0
+loguru
+sacrebleu
+evaluate
+pytablewriter
+tenacity
+
+# Web serving utilities.
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+gradio>=4.16.0
+
+# Optional CUDA/build-specific packages. Uncomment only for the matching scripts.
+# deepspeed>=0.13.0
+# flash-attn>=2.5.0
+# xformers>=0.0.23
+# sglang>=0.1.12
+# s2wrapper @ git+https://github.com/bfshi/scaling_on_scales.git
