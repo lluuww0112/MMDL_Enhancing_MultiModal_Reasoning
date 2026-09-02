@@ -1,0 +1,1 @@
+![Thumnail](/asset/image.png)
